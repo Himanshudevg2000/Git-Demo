@@ -20,10 +20,16 @@ for(var i=0;i<items.length;i++){
 }
 
 
-
+// GETELEMENTBYCLASSNAME
 var liitem = document.getElementsByClassName('item5')
 liitem[0].style.fontWeight = 'bold'
 liitem[0].style.backgroundColor = 'pink'
 
+var li5 = document.getElementsByTagName('li')
+li5[4].style.backgroundColor = 'pink'
+
+
+
+// GETELEMENTBYTAGNAME
 var li5 = document.getElementsByTagName('li')
 li5[4].style.backgroundColor = 'pink'
