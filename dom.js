@@ -33,3 +33,15 @@ li5[4].style.backgroundColor = 'pink'
 // GETELEMENTBYTAGNAME
 var li5 = document.getElementsByTagName('li')
 li5[4].style.backgroundColor = 'pink'
+
+
+// QUERYSELECTOR & QUERYSELECTORALL
+let items = document.querySelectorAll('li')
+items[1].style.color = 'green'
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+
+for(var i=0; i < odd.length; i++){
+    odd[i].style.backgroundColor = 'green'
+}
+
