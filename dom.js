@@ -45,3 +45,22 @@ for(var i=0; i < odd.length; i++){
     odd[i].style.backgroundColor = 'green'
 }
 
+
+
+// CREATING NODES AND MANIPULATING DOM
+
+let newDiv = document.createElement('div')
+
+let newDivText = document.createTextNode('HEllo');
+newDiv.appendChild(newDivText);
+
+let container = document.querySelector('header .container')
+let h1 = document.querySelector('header h1')
+
+container.insertBefore(newDiv, h1)
+
+let secondText = document.createTextNode('HEllo');
+
+let listgroup = document.querySelector('.list-group')
+let li = document.querySelector('li')
+listgroup.insertBefore(secondText,li)
