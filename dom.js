@@ -185,3 +185,23 @@ function savetoLocalStorage(event){
   }
 
 the reason why older user get removed is because the key should be unique and in this the key is same.
+
+
+// task 12
+
+function savetoLocalStorage(event){
+    event.preventDefault();
+    const name = event.target.username.value
+    const email = event.target.emailId.value
+    const obj = {
+        name,
+        email
+    }
+    localStorage.setItem(obj.email,JSON.stringify(obj))
+    onScreen(obj)
+  }
+function onScreen(user){
+    const parentNode = document.getElementById('users');
+    const childHTML = `<li> ${user.name} - ${user.email} </li>`
+    parentNode.innerHTML = parentNode.innerHTML + childHTML
+}
