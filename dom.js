@@ -205,3 +205,28 @@ function onScreen(user){
     const childHTML = `<li> ${user.name} - ${user.email} </li>`
     parentNode.innerHTML = parentNode.innerHTML + childHTML
 }
+
+
+// task 13
+
+function onScreen(user){
+    const parentNode = document.getElementById('users');
+    const childHTML = `<li id=${user.email} > ${user.name} - ${user.email}  <button onclick=editUser('${user.email}','${user.name}')> Edit </button> <button onclick=deleteUser('${user.email}')> Delete </button> </li>`
+    parentNode.innerHTML = parentNode.innerHTML + childHTML
+}
+function deleteUser(emailId){
+    console.log(emailId)
+    localStorage.removeItem(emailId);
+    remooveUserFromScreen(emailId);
+}
+function remooveUserFromScreen(emailId){
+    const parentNode =  document.getElementById('users');
+    const childNodeToBeDeleted = document.getElementById(emailId);
+    parentNode.removeChild(childNodeToBeDeleted);
+}
+function editUser(emailId,name){
+    // console.log(emailId)
+    document.getElementById('email').value = emailId
+    document.getElementById('name').value = name
+    deleteUser(emailId)
+}
